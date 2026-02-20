@@ -58,7 +58,7 @@
                     article.innerHTML = `
                         <h2>${medicamento.nombre}</h2>
                         <p>${medicamento.descripcion}</p>
-                        <button>Ver detalles</button>
+                        <button onclick="window.location.href='${medicamento.link}'">Ver detalles</button>
                     `;
                     section.appendChild(article);
                 });
