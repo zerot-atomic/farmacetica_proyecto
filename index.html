@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión Farmacéutica | Inicio</title>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/css/main-style.css">
 </head>
 <body>
     
     <header>
-        <h2>Farmacia "Salud y Bienestar"</h2>
+        <h2>Farmacia "Fortaleza"</h2>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/catalogo.html">Catálogo de Medicamentos</a></li>
-                <li><a href="pages/proveedores.html">Directorio de Proveedores</a></li>
+                <li><a href="pages/inventario.html">Inventario</a></li>
+                <li><a href="pages/proveedores.html">Proveedores</a></li>
                 <li><a href="pages/sucursales.html">Sucursales</a></li>
-                <li><a href="pages/registro.html">Registro de Empleado</a></li>
+                <li><a href="pages/admin.html">Administración</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
         
         <section id="medicamentos">
             <h1>Búsqueda en el Inventario</h1>  
@@ -28,18 +31,24 @@
             <input type="text" id="formulario" placeholder="Ej. Paracetamol, Omeprazol, Aspirina...">
             <ul id="resultado"></ul>
         </section>
-
+        
         <section id="avisos-inventario">
-            <h2>Avisos de Inventario</h2>
-            <p>Atención equipo: El próximo surtido de medicamentos de control llegará el 25 de febrero.</p>
+            <h2>Resumen General</h2>
+            <ul>
+                <li>Total de medicamentos registrados: 124</li>
+                <li>Medicamentos con bajo stock: 8</li>
+                <li>Proveedores activos: 12</li>
+                <li>Sucursales registradas: 3</li>
+            </ul>
         </section>
         
     </main>
-
+    
     <footer>
         <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
     </footer>
-
+    
+    <script src="/js/breadcrumb.js"></script>
     <script src="js/busqueda.js"></script>
 </body>
 </html>

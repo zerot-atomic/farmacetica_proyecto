@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   
-   <url>
-      <loc>http://www.misitioweb.com/index.html</loc>
-   </url>
 
-   <url>
-      <loc>http://www.misitioweb.com/pages/catalogo.html</loc>
-   </url>
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/index.html</loc>
+    </url>
 
-   <url>
-      <loc>http://www.misitioweb.com/pages/proveedores.html</loc>
-   </url>
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/inventario.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/catalogo.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/detalle-medicamento.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/admin.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/registro-empleado.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/proveedores.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/lista-proveedores.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/sucursales.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/lista-sucursales.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/inventario-sucursal-centro.html</loc>
+    </url>
 
 </urlset>
