@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,5 +14,124 @@
     <a href="lista-sucursales.html">Ver Sucursales Registradas</a>
 
     <script src="/js/breadcrumb.js"></script>
+=======
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales - Farmacia "Salud y Bienestar"</title>
+    <link rel="stylesheet" href="../css/sucursales-style.css">
+</head>
+<body>
+    <header>
+        <h2>Farmacia "Salud y Bienestar"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs">
+            <a href="../index.html">Inicio</a> > <span>Sucursales</span>
+        </nav>
+
+        <h1>Nuestras Sucursales</h1>
+        <section id="sucursales-container" class="sucursales-grid">
+            </section>
+    </main>
+
+    <div id="modal-inventario" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <table id="tabla-inventario">
+                <thead>
+                    <tr>
+                        <th>Medicamento</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-inventario-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica.</p>
+    </footer>
+
+    <script>
+        const sucursales = [
+            { id: 1, nombre: "Sucursal Centro", direccion: "Calle Principal 123", telefono: "(555) 123-4567", horario: "8:00 AM - 10:00 PM" },
+            { id: 2, nombre: "Sucursal Norte", direccion: "Avenida del Norte 456", telefono: "(555) 234-5678", horario: "7:00 AM - 9:00 PM" },
+            { id: 3, nombre: "Sucursal Sur", direccion: "Boulevard Sur 789", telefono: "(555) 345-6789", horario: "8:00 AM - 11:00 PM" },
+            { id: 4, nombre: "Sucursal Este", direccion: "Carrera Este 321", telefono: "(555) 456-7890", horario: "6:00 AM - 10:00 PM" }
+        ];
+
+        let medicamentosCatalogo = [];
+        const modal = document.getElementById('modal-inventario');
+
+        // Cargar datos
+        fetch('../js/catalogo.json')
+            .then(res => res.json())
+            .then(data => {
+                medicamentosCatalogo = data;
+                renderizarSucursales();
+            })
+            .catch(err => {
+                console.error('Error:', err);
+                renderizarSucursales(); // Renderiza aunque falle el fetch
+            });
+
+        function renderizarSucursales() {
+            const container = document.getElementById('sucursales-container');
+            container.innerHTML = sucursales.map(s => `
+                <div class="card-sucursal">
+                    <h2>${s.nombre}</h2>
+                    <p><strong>Dirección:</strong> ${s.direccion}</p>
+                    <p><strong>Horario:</strong> ${s.horario}</p>
+                    <button class="btn-stock" data-id="${s.id}" data-nombre="${s.nombre}">Ver Inventario</button>
+                </div>
+            `).join('');
+
+            // Delegación de eventos para los botones
+            container.querySelectorAll('.btn-stock').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const { id, nombre } = btn.dataset;
+                    abrirModal(id, nombre);
+                });
+            });
+        }
+
+        function abrirModal(id, nombre) {
+            document.getElementById('modal-titulo').textContent = `Inventario: ${nombre}`;
+            const tbody = document.getElementById('tabla-inventario-body');
+            
+            tbody.innerHTML = medicamentosCatalogo.length > 0 
+                ? medicamentosCatalogo.map(m => `
+                    <tr>
+                        <td>${m.nombre}</td>
+                        <td>${Math.floor(Math.random() * 100) + 1} unidades</td>
+                    </tr>
+                `).join('')
+                : '<tr><td colspan="2">No hay datos disponibles</td></tr>';
+
+            modal.style.display = 'block';
+        }
+
+        // Eventos de cierre
+        document.getElementById('close-modal').onclick = () => modal.style.display = 'none';
+        
+        window.onclick = (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        };
+    </script>
+>>>>>>> debug
 </body>
 </html>
