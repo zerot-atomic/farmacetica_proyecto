@@ -1,11 +1,12 @@
 /* filepath: /home/zerot/Documentos/sitio_web/css/catalogo-style.css */
 
-body{
+body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+
 header {
     background-color: #2c3e50;
     color: white;
@@ -38,6 +39,7 @@ nav a:hover {
     background-color: #7e8892;
     color: white;
 }
+
 main {
     max-width: 1200px;
     margin: 30px auto;
@@ -62,54 +64,60 @@ main {
     text-decoration: underline;
 }
 
-#catalogo-completo {
+/* Estilos de la sección del catálogo */
+#catalogo-completo,
+#catalogo-completoA {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Esto asegura 3 columnas por fila */
+    gap: 15px; /* Espacio más pequeño entre columnas */
     padding: 0;
 }
 
-.card-medicamento {
+.card-medicamento, .card-medicamentoA {
     background-color: white;
     border: 1px solid #ecf0f1;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px; /* Menos padding para hacer los bloques más pequeños */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajustamos la distribución para que se vea más compacto */
+    height: auto; /* Ajustamos la altura para que se ajuste al contenido */
 }
 
-.card-medicamento:hover {
+.card-medicamento:hover, .card-medicamentoA:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card-medicamento h2 {
+.card-medicamento h2, .card-medicamentoA h2 {
     color: #2c3e50;
     margin-top: 0;
-    font-size: 18px;
+    font-size: 16px; /* Reducimos el tamaño de la fuente */
     border-bottom: 2px solid #27ae60;
-    padding-bottom: 10px;
+    padding-bottom: 8px; /* Menos espacio debajo del título */
 }
 
-.card-medicamento p {
+.card-medicamento p, .card-medicamentoA p {
     color: #555;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px; /* Reducimos el tamaño de la fuente */
+    line-height: 1.5; /* Un poco menos de espacio entre las líneas */
 }
 
-.card-medicamento button {
+.card-medicamento button, .card-medicamentoA button {
     background-color: #27ae60;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Botón más pequeño */
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px; /* Fuente del botón más pequeña */
     transition: background-color 0.3s;
     width: 100%;
 }
 
-.card-medicamento button:hover {
+.card-medicamento button:hover, .card-medicamentoA button:hover {
     background-color: #229954;
 }
 
@@ -119,4 +127,45 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #catalogo-completo,
+    #catalogo-completoA {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .card-medicamento, .card-medicamentoA {
+        padding: 12px; /* Menos padding en pantallas medianas */
+    }
+
+    .card-medicamento h2, .card-medicamentoA h2 {
+        font-size: 14px;
+    }
+
+    .card-medicamento p, .card-medicamentoA p {
+        font-size: 12px;
+    }
+
+    .card-medicamento button, .card-medicamentoA button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    #catalogo-completo,
+    #catalogo-completoA {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
 }
