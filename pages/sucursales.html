@@ -1,17 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursales</title>
+    <link rel="stylesheet" href="../css/main-style.css">
 </head>
 <body>
-    <!-- Contenedor del breadcrumb -->
-    <div id="breadcrumb-container"></div>
-    
-    <h1>Sucursales</h1>
-    <a href="lista-sucursales.html">Ver Sucursales Registradas</a>
 
-    <script src="/js/breadcrumb.js"></script>
+    <header>
+        <h2>Farmacia "Fortaleza"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
+
+        <section>
+            <h1>Sucursales</h1>
+            <a class="btn-tabla" href="lista-sucursales.html">
+                Ver Sucursales Registradas
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
 </body>
 </html>

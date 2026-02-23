@@ -3,54 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alta Empleado</title>
     <link rel="stylesheet" href="../css/empleados-style.css">
 </head>
 <body>
     <header>
-        <h1>Sistema de gestión de empleados</h1>
+        <h2>Farmacia "Fortaleza"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Contenedor del breadcrumb -->
-    <div id="breadcrumb-container"></div>
+    <main>
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
+    
+        <form id="registroForm" class="form-group">
+                <legend>Datos Personales</legend> <br>
+    
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required> <br>
+    
+                <label>Apellido:</label>
+                <input type="text" id="apellido" required> <br>
+    
+                <label>Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" required> <br>
+    
+                <label>Correo electrónico:</label>
+                <input type="email" id="correo" required> <br>
+    
+                <label>Teléfono:</label>
+                <input type="text" id="telefono" required> <br><br>
+    
+                <legend>Datos Laborales</legend> <br>
+    
+                <label>Puesto:</label>
+                <input type="text" id="puesto" required> <br>
+    
+                <label>Departamento:</label>
+                <input type="text" id="departamento" required> <br>
+    
+                <label>Salario:</label>
+                <input type="number" id="salario" required> <br>
+    
+                <label>Fecha de ingreso:</label>
+                <input type="date" id="fechaIngreso" required> <br>
+    
+            <button type="submit">Registrar Empleado</button>
+    
+            <p id="mensajeError" class="error"></p>
+            <p id="mensajeExito" class="exito"></p>
+        </form>
+    </main>
 
-    <form id="registroForm">
-            <legend>Datos Personales</legend> <br>
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
 
-            <label>Nombre:</label>
-            <input type="text" id="nombre" required> <br>
-
-            <label>Apellido:</label>
-            <input type="text" id="apellido" required> <br>
-
-            <label>Fecha de nacimiento:</label>
-            <input type="date" id="fechaNacimiento" required> <br>
-
-            <label>Correo electrónico:</label>
-            <input type="email" id="correo" required> <br>
-
-            <label>Teléfono:</label>
-            <input type="text" id="telefono" required> <br><br>
-
-            <legend>Datos Laborales</legend> <br>
-
-            <label>Puesto:</label>
-            <input type="text" id="puesto" required> <br>
-
-            <label>Departamento:</label>
-            <input type="text" id="departamento" required> <br>
-
-            <label>Salario:</label>
-            <input type="number" id="salario" required> <br>
-
-            <label>Fecha de ingreso:</label>
-            <input type="date" id="fechaIngreso" required> <br>
-
-        <button type="submit">Registrar Empleado</button>
-
-        <p id="mensajeError" class="error"></p>
-        <p id="mensajeExito" class="exito"></p>
-    </form>
     <script src="/js/breadcrumb.js"></script>
     <script src="../js/validacion-empleados.js"></script>
 </body>

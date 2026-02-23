@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucursal Centro</title>
+    <link rel="stylesheet" href="../css/main-style.css">
 </head>
 <body>
-    <!-- Contenedor del breadcrumb -->
-    <div id="breadcrumb-container"></div>
 
-    <h1>Inventario por Sucursal</h1>
+    <header>
+        <h2>Farmacia "Fortaleza"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <p><strong>Sucursal:</strong> Centro</p>
+    <main>
 
-    <ul>
-        <li>Paracetamol - 20 unidades</li>
-        <li>Omeprazol - 15 unidades</li>
-    </ul>
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
 
-    <script src="/js/breadcrumb.js"></script>
+        <section>
+            <h1>Inventario por Sucursal</h1>
+
+            <p><strong>Sucursal:</strong> Centro</p>
+
+            <ul>
+                <li>Paracetamol - 20 unidades</li>
+                <li>Omeprazol - 15 unidades</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
 </body>
 </html>

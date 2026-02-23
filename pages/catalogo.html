@@ -4,57 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Medicamentos</title>
-    <link rel="stylesheet" href="../css/catalogo-style.css">
+    <link rel="stylesheet" href="../css/main-style.css">
 </head>
 <body>
-    <!-- Contenedor del breadcrumb -->
-    <div id="breadcrumb-container"></div>
-    
-    <h1>Catálogo de Medicamentos</h1>
-    
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Presentación</th>
-                <th>Stock</th>
-                <th>Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Paracetamol</td>
-                <td>500mg - Caja con 20 tabletas</td>
-                <td>35 unidades</td>
-                <td>
-                    <a href="detalle-medicamento.html?id=paracetamol">
-                        Ver detalle
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Omeprazol</td>
-                <td>20mg - Caja con 14 cápsulas</td>
-                <td>12 unidades</td>
-                <td>
-                    <a href="detalle-medicamento.html?id=omeprazol">
-                        Ver detalle
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>Amoxicilina</td>
-                <td>250mg - Caja con 12 cápsulas</td>
-                <td>18 unidades</td>
-                <td>
-                    <a href="detalle-medicamento.html?id=amoxicilina">
-                        Ver detalle
-                    </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <script src="/js/breadcrumb.js"></script>
+
+    <header>
+        <h2>Farmacia "Fortaleza"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
+
+        <section>
+            <h1>Catálogo de Medicamentos</h1>
+
+            <table class="tabla-sistema">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Presentación</th>
+                        <th>Stock</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paracetamol</td>
+                        <td>500mg - Caja con 20 tabletas</td>
+                        <td>35 unidades</td>
+                        <td>
+                            <a class="btn-tabla" href="detalle-medicamento.html?id=paracetamol">
+                                Ver detalle
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Omeprazol</td>
+                        <td>20mg - Caja con 14 cápsulas</td>
+                        <td>12 unidades</td>
+                        <td>
+                            <a class="btn-tabla" href="detalle-medicamento.html?id=omeprazol">
+                                Ver detalle
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amoxicilina</td>
+                        <td>250mg - Caja con 12 cápsulas</td>
+                        <td>18 unidades</td>
+                        <td>
+                            <a class="btn-tabla" href="detalle-medicamento.html?id=amoxicilina">
+                                Ver detalle
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
 </body>
 </html>

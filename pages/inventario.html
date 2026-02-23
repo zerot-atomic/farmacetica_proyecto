@@ -4,30 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
+    <link rel="stylesheet" href="../css/main-style.css">
 </head>
 <body>
-    <!-- Contenedor del breadcrumb -->
-    <div id="breadcrumb-container"></div>
-    
-    <h1>Gestión de Inventario</h1>
-    
-    <p>Administra el stock general de medicamentos en el sistema.</p>
-    
-    <section>
-        <h2>Resumen de Stock</h2>
-        <ul>
-            <li>Total de productos en inventario: 124</li>
-            <li>Productos con bajo stock: 8</li>
-            <li>Última actualización: 20 de febrero de 2026</li>
-        </ul>
-    </section>
-    
-    <section>
-        <h2>Acciones Disponibles</h2>
-        <ul>
-            <li><a href="catalogo.html">Ver Catálogo de Medicamentos</a></li>
-        </ul>
-    </section>
-    <script src="/js/breadcrumb.js"></script>
+
+    <header>
+        <h2>Farmacia "Fortaleza"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
+
+        <section>
+            <h1>Gestión de Inventario</h1>
+            <p>Administra el stock general de medicamentos en el sistema.</p>
+        </section>
+
+        <section>
+            <h2>Resumen de Stock</h2>
+            <ul class="lista-sistema">
+                <li>Total de productos en inventario: 124</li>
+                <li>Productos con bajo stock: 8</li>
+                <li>Última actualización: 20 de febrero de 2026</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Acciones Disponibles</h2>
+            <a class="btn-admin" href="catalogo.html">
+                Ver Catálogo de Medicamentos
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
 </body>
 </html>

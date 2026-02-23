@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Proveedores</title>
+    <link rel="stylesheet" href="../css/main-style.css">
 </head>
 <body>
-    <!-- Contenedor del breadcrumb -->
-    <div id="breadcrumb-container"></div>
-    
+
+    <header>
+        <h2>Farmacia "Fortaleza"</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
+
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
+
         <section id="directorio-proveedores">
             <h1>Laboratorios y Proveedores Oficiales</h1>
             <p>Directorio de contacto para resurtido de inventario clínico.</p>
 
-            <table class="tabla-farmacia">
+            <table class="tabla-sistema">
                 <thead>
                     <tr>
                         <th>Laboratorio</th>
@@ -29,7 +45,7 @@
                         <td><strong>Pfizer</strong></td>
                         <td>Carlos Mendoza</td>
                         <td>555-0101</td>
-                        <td>ventas@pfizer.gmailom</td>
+                        <td>ventas@pfizer.gmail.com</td>
                         <td>Lunes y Jueves</td>
                     </tr>
                     <tr>
@@ -62,9 +78,16 @@
                     </tr>
                 </tbody>
             </table>
+
         </section>
+
     </main>
 
-    <script src="/js/breadcrumb.js"></script>
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
 </body>
 </html>

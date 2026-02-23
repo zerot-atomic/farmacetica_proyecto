@@ -8,10 +8,10 @@ document.getElementById('registroForm').addEventListener('submit', function (e) 
     const valido = validarFormulario();
 
     if (valido) {
-        mostrarMensaje('exito', '✅ Empleado registrado exitosamente.');
+        mostrarMensaje('exito', 'Empleado registrado exitosamente.');
         // this.reset(); // Descomenta si quieres limpiar el form tras el envío
     } else {
-        mostrarMensaje('error', '⚠️ Por favor corrige los errores antes de continuar.');
+        mostrarMensaje('error', 'Por favor corrige los errores antes de continuar.');
     }
 });
 
