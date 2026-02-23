@@ -1,8 +1,12 @@
 # farmacetica_proyecto
 
-# 🏥 Farmacia "Salud y Bienestar" - Documentación Técnica (Parte 1)
+# 🏥 Farmacia "Salud y Bienestar" - Documentación Técnica
 
 Este documento detalla la arquitectura y el funcionamiento interno de la plataforma web estática de la Farmacia "Salud y Bienestar". En esta versión, el sistema ha evolucionado para simular un entorno asíncrono, consumiendo datos desde archivos JSON mediante la API `fetch`, lo que sienta las bases para una futura integración con un backend real.
+
+## ⚙️ ¿Cómo Funciona?
+
+El sistema está dividido en varios módulos interconectados. A diferencia de versiones anteriores, esta rama implementa el uso de la API `fetch` para cargar la información de los medicamentos desde un archivo JSON externo (`catalogo.json`), lo que lo hace mucho más dinámico y escalable.
 
 ---
 
@@ -47,13 +51,9 @@ A diferencia de versiones que usaban parámetros de URL (`?id=`), esta versión 
 ### 1.5 Directorio de Proveedores (`pages/proveedores.html`)
 Mantiene una estructura estática y tabular (`<table class="tabla-farmacia">`). 
 * **Campos**: Muestra el nombre del Laboratorio (Pfizer, Bayer, AstraZeneca, etc.), Representante, Teléfono, Email de Contacto y los Días de Entrega designados.
-# 🏥 Farmacia "Salud y Bienestar" - Sistema de Gestión Farmacéutica
 
 Este proyecto es una aplicación web estática para la gestión de la Farmacia "Salud y Bienestar". Permite a los usuarios administrar y consultar un catálogo de medicamentos, visualizar el directorio de proveedores, gestionar sucursales y acceder a un portal de registro. Todo el sistema opera del lado del cliente utilizando HTML, CSS y JavaScript puro, implementando cargas asíncronas para simular bases de datos reales.
 
-## ⚙️ ¿Cómo Funciona?
-
-El sistema está dividido en varios módulos interconectados. A diferencia de versiones anteriores, esta rama implementa el uso de la API `fetch` para cargar la información de los medicamentos desde un archivo JSON externo (`catalogo.json`), lo que lo hace mucho más dinámico y escalable.
 
 ### 📂 Análisis Detallado de Archivos y Módulos
 
