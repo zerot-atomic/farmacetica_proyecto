@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Base de datos de prueba: Inventario de Farmacia
 const baseDeDatos = [
     { 
@@ -20,19 +19,6 @@ const baseDeDatos = [
         link: "pages/detalle-medicamento.html?id=omeprazol" 
     }
 ];
-=======
-// Cargar la base de datos desde el archivo JSON
-let baseDeDatos = [];
-
-// Función para cargar los datos
-const cargarDatos = async () => {
-    const response = await fetch('../js/catalogo.json');
-    baseDeDatos = await response.json();
-};
-
-// Inicializar la carga de datos
-cargarDatos();
->>>>>>> debug
 
 const formulario = document.querySelector('#formulario');
 const resultado = document.querySelector('#resultado');
@@ -45,7 +31,7 @@ const filtrar = () => {
 
     // filter crea una lista nueva con los elementos que coincidan
     const encontrados = baseDeDatos.filter(item => 
-        item.nombre.toLowerCase().includes(texto) // Cambiado a 'nombre'
+        item.titulo.toLowerCase().includes(texto) // Cambiado a 'nombre'
     );
 
     if (encontrados.length === 0) {
@@ -53,7 +39,7 @@ const filtrar = () => {
         return; // Detener la ejecución
     }
     encontrados.forEach(item => {
-        resultado.innerHTML += `<li><a href="${item.link}">${item.nombre}</a> - ${item.descripcion}</li>`; // Cambiado a 'nombre'
+        resultado.innerHTML += `<li><a href="${item.link}">${item.titulo}</a> - ${item.descripcion}</li>`; // Cambiado a 'nombre'
     });
 }
 

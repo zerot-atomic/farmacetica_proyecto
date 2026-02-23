@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../css/catalogo-style.css">
 </head>
 <body>
-<<<<<<< HEAD
     <!-- Contenedor del breadcrumb -->
     <div id="breadcrumb-container"></div>
     
@@ -57,65 +56,5 @@
     </table>
     
     <script src="/js/breadcrumb.js"></script>
-=======
-    <header>
-        <!-- Barra de navegación -->
-        <h2>Farmacia "Salud y Bienestar"</h2>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catálogo de Medicamentos</a></li>
-                <li><a href="proveedores.html">Directorio de Proveedores</a></li>
-                <li><a href="sucursales.html">Sucursales</a></li>
-                <li><a href="registro.html">Registro de Empleado</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Breadcrumb -->
-        <nav class="breadcrumbs">
-            <a href="../index.html">Inicio</a> > <span>Catálogo</span>
-        </nav>
-
-        <section id="catalogo-completoA"> 
-            <!-- Aquí se insertarán los artículos dinámicamente -->
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
-    </footer>
-
-    <script>
-        fetch('../js/catalogo.json')
-            .then(response => response.json())
-            .then(medicamentos => {
-                const main = document.querySelector('#catalogo-completoA');
-                main.innerHTML = ''; // Limpiar el contenido de la sección antes de agregar los artículos dinámicos
-
-                let section;
-                medicamentos.forEach((medicamento, index) => {
-                    if (index % 3 === 0) {
-                        // Crear una nueva sección cada vez que lleguemos a 3 medicamentos
-                        section = document.createElement('section');
-                        section.className = 'section-medicamentos'; // Añadimos una clase para estilo
-                        main.appendChild(section);
-                    }
-
-                    const article = document.createElement('article');
-                    article.className = 'card-medicamentoA';
-                    article.id = medicamento.id;
-                    article.innerHTML = `
-                        <h2>${medicamento.nombre}</h2>
-                        <p>${medicamento.descripcion}</p>
-                        <button onclick="window.location.href='${medicamento.link}'">Ver detalles</button>
-                    `;
-                    section.appendChild(article);
-                });
-            })
-            .catch(error => console.error('Error al cargar los medicamentos:', error));
-    </script>
->>>>>>> debug
 </body>
 </html>
