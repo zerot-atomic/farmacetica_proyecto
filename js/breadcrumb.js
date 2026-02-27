@@ -81,10 +81,10 @@ const rutasBreadcrumb = {
 
 // 2. Función para generar el HTML dinámicamente
 function generarBreadcrumb() {
-    // Obtenemos el nombre del archivo actual (ej. "catalogo.html")
+    // Obtenemos el nombre del archivo actual
     let rutaActual = window.location.pathname.split("/").pop();
     
-    // Si la ruta está vacía (ej. localhost:3000/), asumimos que es el inicio
+    // Si la ruta está vacía, asumimos que es el inicio
     if (rutaActual === "") rutaActual = "index.html";
 
     // Buscamos la jerarquía en nuestro mapa
