@@ -1,44 +1,38 @@
-// Simulamos la misma base de datos
-const medicamentos = {
-    paracetamol: {
-        nombre: "Paracetamol",
-        concentracion: "500mg",
-        lote: "L-2026-02A",
-        caducidad: "15/08/2027",
-        stock: 35
-    },
-    amoxicilina: {
-        nombre: "Amoxicilina",
-        concentracion: "250mg",
-        lote: "AMX-7782",
-        caducidad: "20/11/2026",
-        stock: 18
-    },
-    omeprazol: {
-        nombre: "Omeprazol",
-        concentracion: "20mg",
-        lote: "OME-9921",
-        caducidad: "03/04/2027",
-        stock: 12
-    }
-};
+import { obtenerMedicamentoPorId } from '../js/medicamentosApi.js';
 
-// Leer el parámetro ?id=
+// Leer el parámetro ?id= desde la URL
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-// Validar que exista
-if (id && medicamentos[id]) {
-    const medicamento = medicamentos[id];
+// CARGA DE DETALLES DEL MEDICAMENTO
+// Obtiene los datos del medicamento específico de la API
+async function cargarDetalle() {
+    if (!id) {
+        document.getElementById("detalle").innerHTML = "<p>ID de medicamento no proporcionado.</p>";
+        return;
+    }
 
-    // Cambiar título del navegador dinámicamente
-    document.title = "Detalle - " + medicamento.nombre;
+    try {
+        // Petición GET específica para este medicamento
+        const medicamento = await obtenerMedicamentoPorId(id);
 
-    document.getElementById("nombre").textContent = medicamento.nombre;
-    document.getElementById("concentracion").textContent = medicamento.concentracion;
-    document.getElementById("lote").textContent = medicamento.lote;
-    document.getElementById("caducidad").textContent = medicamento.caducidad;
-    document.getElementById("stock").textContent = medicamento.stock;
-} else {
-    document.getElementById("detalle").innerHTML = "<p>Medicamento no encontrado.</p>";
+        // Actualiza el título de la pestaña del navegador
+        document.title = "Detalle - " + medicamento.nombreComercial;
+
+        // Inyectar los datos en el DOM
+        // Usa 'N/A' como fallback si el campo no existe en la API
+        document.getElementById("nombre").textContent = medicamento.nombreComercial;
+        document.getElementById("descripcion").textContent = medicamento.descripcion || 'N/A';
+        document.getElementById("sustanciaActiva").textContent = medicamento.sustanciaActiva || 'N/A';
+        document.getElementById("laboratorio").textContent = medicamento.laboratorio || 'N/A';
+        document.getElementById("presentacion").textContent = medicamento.presentacion || 'N/A';
+        document.getElementById("stock").textContent = medicamento.stock || 0;
+        document.getElementById("precio").textContent = `$${medicamento.precio}` || '$0.00';
+    } catch (error) {
+        console.error('Error al cargar el detalle:', error);
+        document.getElementById("detalle").innerHTML = "<p>Medicamento no encontrado.</p>";
+    }
 }
+
+// Cargar el detalle al cargar la página
+document.addEventListener('DOMContentLoaded', cargarDetalle);

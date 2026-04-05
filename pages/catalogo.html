@@ -28,47 +28,20 @@
 
         <section>
             <h1>Catálogo de Medicamentos</h1>
+            
+            <button class="btn-agregar" id="btn-agregar">+ Agregar Nuevo Medicamento</button>
 
             <table class="tabla-sistema">
                 <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Presentación</th>
+                        <th>Nombre Comercial</th>
                         <th>Stock</th>
-                        <th>Acción</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Paracetamol</td>
-                        <td>500mg - Caja con 20 tabletas</td>
-                        <td>35 unidades</td>
-                        <td>
-                            <a class="btn-tabla" href="detalle-medicamento.html?id=paracetamol">
-                                Ver detalle
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Omeprazol</td>
-                        <td>20mg - Caja con 14 cápsulas</td>
-                        <td>12 unidades</td>
-                        <td>
-                            <a class="btn-tabla" href="detalle-medicamento.html?id=omeprazol">
-                                Ver detalle
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Amoxicilina</td>
-                        <td>250mg - Caja con 12 cápsulas</td>
-                        <td>18 unidades</td>
-                        <td>
-                            <a class="btn-tabla" href="detalle-medicamento.html?id=amoxicilina">
-                                Ver detalle
-                            </a>
-                        </td>
-                    </tr>
+                <tbody id="catalogo-body">
+                    <!-- Los datos se cargarán dinámicamente desde la API -->
                 </tbody>
             </table>
 
@@ -81,6 +54,7 @@
     </footer>
 
     <script src="../js/breadcrumb.js"></script>
+    <script type="module" src="../js/catalogo.js"></script>
 
 </body>
 </html>

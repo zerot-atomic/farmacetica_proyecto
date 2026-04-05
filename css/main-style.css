@@ -178,7 +178,7 @@ footer {
     background-color: #f8f9fa;
 }
 
-/* Botón dentro de tabla */
+/* Botones dentro de tabla */
 .btn-tabla {
     padding: 8px 14px;
     background-color: #27ae60;
@@ -191,6 +191,57 @@ footer {
 
 .btn-tabla:hover {
     background-color: #219150;
+}
+
+
+/* Grupo de botones en tabla */
+.btn-grupo {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-tabla {
+    border: none;
+    cursor: pointer;
+}
+
+.btn-actualizar {
+    background-color: #3498db;
+}
+
+.btn-actualizar:hover {
+    background-color: #2980b9;
+}
+
+.btn-eliminar {
+    background-color: #e62121;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #801414;
+}
+
+/* Botón agregar medicamento */
+.btn-agregar {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.btn-agregar:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(39,174,96,0.3);
 }
 
 /* =========================
