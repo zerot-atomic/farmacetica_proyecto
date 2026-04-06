@@ -27,6 +27,22 @@ const rutasBreadcrumb = {
         { nombre: "Catálogo de Medicamentos", url: "/pages/catalogo.html" },
         { nombre: "Detalles", url: "/pages/detalle-medicamento.html" },
     ],
+
+    // (Nivel 3)
+    "editar-medicamento.html": [
+        { nombre: "Inicio", url: "/index.html" },
+        { nombre: "Inventario", url: "/pages/inventario.html" },
+        { nombre: "Catálogo de Medicamentos", url: "/pages/catalogo.html" },
+        { nombre: "Editar Medicamento", url: "/pages/editar-medicamento.html" },
+    ],
+
+    // (Nivel 3)
+    "agregar-medicamento.html": [
+        { nombre: "Inicio", url: "/index.html" },
+        { nombre: "Inventario", url: "/pages/inventario.html" },
+        { nombre: "Catálogo de Medicamentos", url: "/pages/catalogo.html" },
+        { nombre: "Agregar Medicamento", url: "/pages/agregar-medicamento.html" },
+    ],
     
     // ---- SECCION PROVEEDORES ----
     // (Nivel 1)

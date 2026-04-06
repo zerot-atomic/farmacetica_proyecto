@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Medicamento</title>
+    <link rel="stylesheet" href="../css/main-style.css">
+    <link rel="stylesheet" href="../css/form-style.css">
+</head>
+<body>
+
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Farmacia "Fortaleza"</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html" class="active">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Barra de breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div id="breadcrumb-container"></div>
+    </div>
+
+    <main class="main-content">
+        <div class="form-agregar">
+            <h2>Agregar Nuevo Medicamento</h2>
+            <form id="formulario-medicamento">
+                <div class="form-group">
+                    <label for="nombreComercial">Nombre Comercial *</label>
+                    <input type="text" id="nombreComercial" name="nombreComercial" required
+                           placeholder="Ej: Paracetamol 500mg" pattern="[a-zA-Z0-9\s\-áéíóúñ]+"
+                           title="Solo letras, números y espacios">
+                </div>
+
+                <div class="form-group">
+                    <label for="sustanciaActiva">Sustancia Activa *</label>
+                    <input type="text" id="sustanciaActiva" name="sustanciaActiva" required
+                           placeholder="Ej: Paracetamol" pattern="[a-zA-Z0-9\s\-áéíóúñ]+"
+                           title="Solo letras, números y espacios">
+                </div>
+
+                <div class="form-group">
+                    <label for="laboratorio">Laboratorio *</label>
+                    <input type="text" id="laboratorio" name="laboratorio" required
+                           placeholder="Ej: Pfizer" pattern="[a-zA-Z0-9\s\-áéíóúñ]+"
+                           title="Solo letras, números y espacios">
+                </div>
+
+                <div class="form-group">
+                    <label for="presentacion">Presentación *</label>
+                    <input type="text" id="presentacion" name="presentacion" required
+                           placeholder="Ej: Tabletas, Inyección" pattern="[a-zA-Z0-9\s\-áéíóúñ]+"
+                           title="Solo letras, números y espacios">
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción *</label>
+                    <textarea id="descripcion" name="descripcion" required
+                              placeholder="Descripción del medicamento"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="precio">Precio *</label>
+                    <input type="number" id="precio" name="precio" required
+                           placeholder="Ej: 100.00" step="0.01" min="0"
+                           title="Ingrese un precio válido">
+                </div>
+
+                <div class="form-group">
+                    <label for="stock">Stock *</label>
+                    <input type="number" id="stock" name="stock" required
+                           placeholder="Ej: 50" step="1" min="0"
+                           title="Ingrese un número válido">
+                </div>
+
+                <div class="botones">
+                    <button type="submit" class="btn-guardar">Guardar Medicamento</button>
+                    <a href="catalogo.html" class="btn-cancelar">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+    <script type="module" src="../js/agregar-medicamento.js"></script>
+
+</body>
+</html>

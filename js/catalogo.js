@@ -30,9 +30,9 @@ function renderizarTabla(medicamentos) {
                     <a class="btn-tabla" href="detalle-medicamento.html?id=${medicamento.id}">
                         Ver detalles
                     </a>
-                    <button class="btn-tabla btn-actualizar" data-id="${medicamento.id}">
+                    <a class="btn-tabla btn-actualizar" href="editar-medicamento.html?id=${medicamento.id}">
                         Actualizar
-                    </button>
+                    </a>
                     <button class="btn-tabla btn-eliminar" data-id="${medicamento.id}">
                         Eliminar
                     </button>
@@ -55,6 +55,7 @@ function agregarEventosEliminar() {
                 try {
                     // Ejecuta la operación DELETE en la API
                     await eliminarDato(id);
+                    alert('Medicamento eliminado exitosamente');
                     // Remueve la fila del DOM inmediatamente
                     e.target.closest('tr').remove();
                 } catch (error) {

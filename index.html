@@ -7,31 +7,37 @@
     <link rel="stylesheet" href="css/main-style.css">
 </head>
 <body>
-    
-    <header>
-        <h2>Farmacia "Fortaleza"</h2>
-        <nav>
+
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Farmacia "Fortaleza"</h2>
+        </div>
+        <nav class="sidebar-nav">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="pages/inventario.html">Inventario</a></li>
                 <li><a href="pages/proveedores.html">Proveedores</a></li>
                 <li><a href="pages/sucursales.html">Sucursales</a></li>
                 <li><a href="pages/admin.html">Administración</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
-    <main>
-        <!-- Contenedor del breadcrumb -->
+    <!-- Barra de breadcrumb -->
+    <div class="breadcrumb-bar">
         <div id="breadcrumb-container"></div>
-        
+    </div>
+
+    <main class="main-content">
         <section id="medicamentos">
-            <h1>Búsqueda en el Inventario</h1>  
-            <p>Busca medicamentos en nuestro catálogo.</p>   
-            <input type="text" id="formulario" placeholder="Ej. Paracetamol, Omeprazol, Aspirina...">
+            <h1>Búsqueda en el Inventario</h1>
+            <p>Busca medicamentos en nuestro catálogo.</p>
+            <input type="text" id="input-busqueda" placeholder="Ej. Paracetamol, Omeprazol, Aspirina...">
+            <button id="btn-buscar" class="btn-agregar">Buscar</button>
             <ul id="resultado"></ul>
         </section>
-        
+
         <section id="avisos-inventario">
             <h2>Resumen General</h2>
             <ul>
@@ -41,9 +47,8 @@
                 <li>Sucursales registradas: 3</li>
             </ul>
         </section>
-        
     </main>
-    
+
     <footer>
         <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
     </footer>

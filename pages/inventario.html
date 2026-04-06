@@ -8,27 +8,39 @@
 </head>
 <body>
 
-    <header>
-        <h2>Farmacia "Fortaleza"</h2>
-        <nav>
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Farmacia "Fortaleza"</h2>
+        </div>
+        <nav class="sidebar-nav">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="inventario.html" class="active">Inventario</a></li>
                 <li><a href="proveedores.html">Proveedores</a></li>
                 <li><a href="sucursales.html">Sucursales</a></li>
                 <li><a href="admin.html">Administración</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
-    <main>
-
-        <!-- Contenedor del breadcrumb -->
+    <!-- Barra de breadcrumb -->
+    <div class="breadcrumb-bar">
         <div id="breadcrumb-container"></div>
+    </div>
+
+    <main class="main-content">
 
         <section>
             <h1>Gestión de Inventario</h1>
             <p>Administra el stock general de medicamentos en el sistema.</p>
+        </section>
+        
+        <section>
+            <h2>Acciones Disponibles</h2>
+            <a class="btn-admin" href="catalogo.html">
+                Ver Catálogo de Medicamentos
+            </a>
         </section>
 
         <section>
@@ -38,13 +50,6 @@
                 <li>Productos con bajo stock: 8</li>
                 <li>Última actualización: 20 de febrero de 2026</li>
             </ul>
-        </section>
-
-        <section>
-            <h2>Acciones Disponibles</h2>
-            <a class="btn-admin" href="catalogo.html">
-                Ver Catálogo de Medicamentos
-            </a>
         </section>
 
     </main>

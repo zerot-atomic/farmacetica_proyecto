@@ -1,39 +1,51 @@
-import { getDatos, iniciar } from './medicamentosApi.js';
+import { obtenerDatos } from './medicamentosApi.js';
 
-// BÚSQUEDA EN TIEMPO REAL
-// Filtra medicamentos mientras el usuario escribe
-// Solo busca en los datos cacheados (sin hacer peticiones a API)
-async function filtrarDatos() {
-    const formulario = document.querySelector('#formulario');
-    const resultado = document.querySelector('#resultado');
-    
-    // Normalizar a minúsculas para búsqueda
-    const texto = formulario.value.toLowerCase().trim();
+function obtenerTexto() {
+    const search_input = document.querySelector('#input-busqueda');
+    const user_text = search_input.value.toLowerCase().trim();
+    return user_text;
+}
 
-    resultado.innerHTML = '';
+async function filtrarMedicamentos() {
+    const texto = obtenerTexto();
+
+    // llamamos a la función que obtiene los datos de la API
+    const medicamentos  = await obtenerDatos();
 
     // Busca coincidencias en el nombre comercial del medicamento
-    const filtrados = getDatos().filter(item =>
+    const filtrados = medicamentos.filter(item =>
         item.nombreComercial.toLowerCase().includes(texto)
     );
+    console.log('Medicamentos filtrados:', filtrados);
+    console.log('Texto de búsqueda:', texto);
+    return { filtrados, texto };
+}
 
+function mostrarResultados(filtrados, texto) {
+    const resultado = document.querySelector('#resultado');
+    resultado.innerHTML = '';
+    
+    console.log('Resultados encontrados:', filtrados.length);
     if (filtrados.length === 0) {
         resultado.innerHTML = `<li>No se encontraron resultados para "<b>${texto}</b>"</li>`;
         return; // Detener la ejecución
     }
-    filtrados.forEach(item => {
-        resultado.innerHTML += `<li><a href="${item.link}">${item.nombreComercial}</a> - ${item.descripcion}</li>`; 
+  
+    let html = `<li>Resultados para "<b>${texto}</b>":</li>`;
+    filtrados.forEach(med => {
+        html += `
+        <li>
+            <a href="pages/detalle-medicamento.html?id=${med.id}">${med.nombreComercial}</a> - ${med.descripcion}
+        </li>
+        `;
     });
+
+    resultado.innerHTML = html;
 }
 
-// INICIALIZACIÓN - Caché primario
-// Función que se ejecuta al cargar la página:
-// Carga todos los medicamentos en memoria (datos cacheados)
-// El caché evita múltiples peticiones a API durante la búsqueda
-async function main() {
-    await iniciar(); // Carga el caché antes de permitir búsquedas
-    const formulario = document.querySelector('#formulario');
-    formulario.addEventListener('keyup', filtrarDatos);
-}
-
-main();
+const btnBuscar = document.querySelector('#btn-buscar');
+btnBuscar.addEventListener('click', () => {
+    filtrarMedicamentos().then(({ filtrados, texto }) => {
+        mostrarResultados(filtrados, texto);
+    });
+});

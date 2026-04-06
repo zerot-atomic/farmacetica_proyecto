@@ -7,57 +7,64 @@
     <link rel="stylesheet" href="../css/empleados-style.css">
 </head>
 <body>
-    <header>
-        <h2>Farmacia "Fortaleza"</h2>
-        <nav>
+
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Farmacia "Fortaleza"</h2>
+        </div>
+        <nav class="sidebar-nav">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="inventario.html">Inventario</a></li>
                 <li><a href="proveedores.html">Proveedores</a></li>
                 <li><a href="sucursales.html">Sucursales</a></li>
-                <li><a href="admin.html">Administración</a></li>
+                <li><a href="admin.html" class="active">Administración</a></li>
             </ul>
         </nav>
-    </header>
+    </aside>
 
-    <main>
-        <!-- Contenedor del breadcrumb -->
+    <!-- Barra de breadcrumb -->
+    <div class="breadcrumb-bar">
         <div id="breadcrumb-container"></div>
-    
+    </div>
+
+    <main class="main-content">
+
         <form id="registroForm" class="form-group">
                 <legend>Datos Personales</legend> <br>
-    
+
                 <label>Nombre:</label>
                 <input type="text" id="nombre" required> <br>
-    
+
                 <label>Apellido:</label>
                 <input type="text" id="apellido" required> <br>
-    
+
                 <label>Fecha de nacimiento:</label>
                 <input type="date" id="fechaNacimiento" required> <br>
-    
+
                 <label>Correo electrónico:</label>
                 <input type="email" id="correo" required> <br>
-    
+
                 <label>Teléfono:</label>
                 <input type="text" id="telefono" required> <br><br>
-    
+
                 <legend>Datos Laborales</legend> <br>
-    
+
                 <label>Puesto:</label>
                 <input type="text" id="puesto" required> <br>
-    
+
                 <label>Departamento:</label>
                 <input type="text" id="departamento" required> <br>
-    
+
                 <label>Salario:</label>
                 <input type="number" id="salario" required> <br>
-    
+
                 <label>Fecha de ingreso:</label>
                 <input type="date" id="fechaIngreso" required> <br>
-    
+
             <button type="submit">Registrar Empleado</button>
-    
+
             <p id="mensajeError" class="error"></p>
             <p id="mensajeExito" class="exito"></p>
         </form>

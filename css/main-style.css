@@ -52,8 +52,8 @@ nav a:hover {
 
 /* Main */
 main {
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
@@ -119,6 +119,151 @@ footer {
     padding: 25px 15px;
     margin-top: 40px;
     font-size: 14px;
+}
+
+/* ========================================
+   SIDEBAR Y LAYOUT
+   ======================================== */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 25px 20px;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 8px;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-left: 20px;
+}
+
+.sidebar-nav a.active {
+    background-color: rgba(39, 174, 96, 0.4);
+    color: white;
+    border-left: 3px solid #27ae60;
+}
+
+/* Barra de breadcrumb */
+.breadcrumb-bar {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    height: 60px;
+    background: white;
+    border-bottom: 1px solid #ecf0f1;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 900;
+    display: flex;
+    align-items: center;
+}
+
+#breadcrumb-container {
+    width: 100%;
+}
+
+/* Ajuste del contenido principal */
+.main-content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f4f6f9;
+    min-height: calc(100vh - 60px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+    }
+
+    .sidebar-header {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .sidebar-nav ul {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .sidebar-nav li {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .sidebar-nav a {
+        padding: 8px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .breadcrumb-bar {
+        left: 0;
+        top: auto;
+        position: relative;
+        height: auto;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    footer {
+        margin-left: 0;
+    }
 }
 
 /* ---------- SECCION PAGINA ADMIN * ----------- /
@@ -298,4 +443,26 @@ footer {
     background-color: #f9fafb;
     border-radius: 8px;
     border: 1px solid #ecf0f1;
+}
+
+#resultado {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Quita el padding por defecto */
+    margin: 0;        /* Quita el margen por defecto */
+}
+
+#resultado li {
+    margin-bottom: 10px; /* Espacio entre resultados */
+    padding: 8px 12px;   /* Un poquito de relleno */
+    border-bottom: 1px solid #ddd; /* Línea sutil separadora */
+    font-family: Arial, sans-serif;
+}
+
+#resultado li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #1a73e8;        /* Color agradable para el link */
+}
+
+#resultado li a:hover {
+    text-decoration: underline; /* Hover bonito */
 }
