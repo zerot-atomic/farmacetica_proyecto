@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursal Centro</title>
+    <link rel="stylesheet" href="../css/main-style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <button class="hamburger" id="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="../index.html"><h1>Farmacia Fortaleza</h1></a>
+    </header>
+
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Farmacia "Fortaleza"</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html" class="active">Inventario</a></li>
+                <li><a href="proveedores.html">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Barra de breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div id="breadcrumb-container"></div>
+    </div>
+
+    <main class="main-content">
+
+        <section>
+            <h1>Inventario por Sucursal</h1>
+
+            <p><strong>Sucursal:</strong> Centro</p>
+
+            <ul>
+                <li>Paracetamol - 20 unidades</li>
+                <li>Omeprazol - 15 unidades</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
+<script>
+    const btnMenu = document.getElementById("btn-menu");
+    const sidebar = document.querySelector(".sidebar");
+    const main = document.querySelector(".main-content");
+    const topbar = document.querySelector(".top-bar");
+    const footer = document.querySelector("footer");
+    const breadcrumb = document.querySelector(".breadcrumb-bar");
+
+    btnMenu.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        main.classList.toggle("active");
+        topbar.classList.toggle("active");
+        footer.classList.toggle("active");
+        btnMenu.classList.toggle("active");
+        if (breadcrumb) breadcrumb.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

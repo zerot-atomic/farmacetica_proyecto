@@ -1,0 +1,261 @@
+/* ========================
+   RESET
+======================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2c3e50;
+}
+
+/* ========================
+   SIDEBAR
+======================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 25px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: rgba(255,255,255,0.85);
+    padding: 12px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar-nav a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar-nav a.active {
+    background: rgba(39,174,96,0.4);
+}
+
+/* ========================
+   TOP BAR
+======================== */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: left 0.3s ease;
+    z-index: 900;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.top-bar.active {
+    left: 250px;
+}
+
+/* ========================
+   MAIN CONTENT
+======================== */
+.main-content {
+    margin-left: 0;
+    margin-top: 100px;
+    padding: 40px;
+    min-height: calc(100vh - 60px);
+    transition: margin-left 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.main-content.active {
+    margin-left: 250px;
+}
+
+/* ========================
+   SECCIONES (CARDS)
+======================== */
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    width: 100%;
+}
+
+/* ========================
+   INPUT
+======================== */
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39,174,96,0.15);
+}
+/* ========================
+   BREADCRUMB
+======================== */
+
+.breadcrumb-bar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    z-index: 800;
+    transition: left 0.3s ease;
+}
+
+.breadcrumb-bar.active {
+    left: 250px;
+}
+
+/* ========================
+   BOTÓN
+======================== */
+.btn-agregar {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-agregar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(39,174,96,0.35);
+}
+
+.btn-agregar:active {
+    transform: scale(0.97);
+}
+
+/* ========================
+   HAMBURGER
+======================== */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    background: #ecf0f1;
+}
+
+.hamburger:hover {
+    background: #dfe6e9;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #2c3e50;
+    border-radius: 2px;
+}
+
+/* animación */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px,-5px);
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+footer.active {
+    margin-left: 250px;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+
+    .sidebar {
+        left: -250px;
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .top-bar,
+    .top-bar.active {
+        left: 0;
+    }
+
+    .main-content,
+    .main-content.active {
+        margin-left: 0;
+    }
+
+    footer,
+    footer.active {
+        margin-left: 0;
+    }
+
+    .breadcrumb-bar,
+    .breadcrumb-bar.active {
+        left: 0;
+    }
+}

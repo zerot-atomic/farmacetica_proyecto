@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Proveedores</title>
+    <link rel="stylesheet" href="../css/main-style.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <button class="hamburger" id="btn-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <a href="../index.html"><h1>Farmacia Fortaleza</h1></a>
+    </header>
+
+    <!-- Sidebar de navegación -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Farmacia "Fortaleza"</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="inventario.html">Inventario</a></li>
+                <li><a href="proveedores.html" class="active">Proveedores</a></li>
+                <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Barra de breadcrumb -->
+    <div class="breadcrumb-bar">
+        <div id="breadcrumb-container"></div>
+    </div>
+
+    <main class="main-content">
+
+        <section id="directorio-proveedores">
+            <h1>Laboratorios y Proveedores Oficiales</h1>
+            <p>Directorio de contacto para resurtido de inventario clínico.</p>
+
+            <table class="tabla-sistema">
+                <thead>
+                    <tr>
+                        <th>Laboratorio</th>
+                        <th>Representante</th>
+                        <th>Teléfono</th>
+                        <th>Email de Contacto</th>
+                        <th>Días de Entrega</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Pfizer</strong></td>
+                        <td>Carlos Mendoza</td>
+                        <td>555-0101</td>
+                        <td>ventas@pfizer.gmail.com</td>
+                        <td>Lunes y Jueves</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bayer</strong></td>
+                        <td>Ana Lucía Torres</td>
+                        <td>555-0202</td>
+                        <td>contacto@bayer.gmail.com</td>
+                        <td>Martes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AstraZeneca</strong></td>
+                        <td>Roberto Gómez</td>
+                        <td>555-0303</td>
+                        <td>pedidos@astrazeneca.gmail.com</td>
+                        <td>Miércoles</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Novartis</strong></td>
+                        <td>Elena Ruiz</td>
+                        <td>555-0404</td>
+                        <td>distribucion@novartis.gmail.com</td>
+                        <td>Viernes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Roche</strong></td>
+                        <td>Mario Domínguez</td>
+                        <td>555-0505</td>
+                        <td>clinico@roche.gmail.com</td>
+                        <td>Lunes a Viernes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
+    </footer>
+
+    <script src="../js/breadcrumb.js"></script>
+
+<script>
+    const btnMenu = document.getElementById("btn-menu");
+    const sidebar = document.querySelector(".sidebar");
+    const main = document.querySelector(".main-content");
+    const topbar = document.querySelector(".top-bar");
+    const footer = document.querySelector("footer");
+    const breadcrumb = document.querySelector(".breadcrumb-bar");
+
+    btnMenu.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        main.classList.toggle("active");
+        topbar.classList.toggle("active");
+        footer.classList.toggle("active");
+        btnMenu.classList.toggle("active");
+        if (breadcrumb) breadcrumb.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>
