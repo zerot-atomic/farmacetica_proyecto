@@ -8,19 +8,8 @@
 </head>
 <body>
     
-    <header>
-        <h2>Farmacia "Fortaleza"</h2>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/inventario.html">Inventario</a></li>
-                <li><a href="pages/proveedores.html">Proveedores</a></li>
-                <li><a href="pages/sucursales.html">Sucursales</a></li>
-                <li><a href="pages/admin.html">Administración</a></li>
-                <a href="#" onclick="logout()" class="nav-btn">Cerrar sesión</a>
-            </ul>
-        </nav>
-    </header>
+    <!-- Contenedor del la barra de navegación -->
+    <div id="header-container"></div>
 
     <main>
         <!-- Contenedor del breadcrumb -->
@@ -45,10 +34,11 @@
         
     </main>
     
-    <footer>
-        <p>&copy; 2026 Sistema de Gestión Farmacéutica. Proyecto de Desarrollo Web Profesional.</p>
-    </footer>
+    <!-- Contenedor del pie de página -->
+    <div id="footer-container"></div>
     
+    <script src="js/layout.js"></script>
+    <script>loadLayout();</script>
     <script src="/js/breadcrumb.js"></script>
     <script src="js/busqueda.js"></script>
     <script src="js/auth.js"></script>
