@@ -1,4 +1,4 @@
-// Validaciones para formularios de medicamentos
+// Validaciones para formularios de medicamentos (actualización y creación)
 export function validarDatos(medicamento) {
     if (!medicamento.nombreComercial || !medicamento.sustanciaActiva ||
         !medicamento.laboratorio || !medicamento.presentacion ||

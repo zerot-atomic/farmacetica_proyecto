@@ -1,3 +1,4 @@
+// importar funciones necesarias para crear un nuevo medicamento y validar los datos del formulario
 import { crearDato } from './medicamentosApi.js';
 import { validarDatos } from './validar-medicamento.js';
 

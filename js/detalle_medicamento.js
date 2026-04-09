@@ -1,3 +1,4 @@
+// importar función para obtener datos de la API de medicamentos (por ID específico)
 import { obtenerMedicamentoPorId } from '../js/medicamentosApi.js';
 
 // Leer el parámetro ?id= desde la URL

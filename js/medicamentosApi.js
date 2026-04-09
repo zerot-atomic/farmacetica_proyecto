@@ -2,6 +2,7 @@
 const API_URL = 'https://69cdf53233a09f831b7cb3af.mockapi.io/medicamentos';
 
 // 1. GET (Obtener datos)
+// lleva export porque se va a usar en otras partes del proyecto
 export async function obtenerDatos() {
     try {
         const respuesta = await fetch(API_URL);

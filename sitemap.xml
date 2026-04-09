@@ -46,4 +46,11 @@
         <loc>http://www.farmacia-fortaleza.com/pages/inventario-sucursal-centro.html</loc>
     </url>
 
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/editar-medicamento.html</loc>
+    </url>
+
+    <url>
+        <loc>http://www.farmacia-fortaleza.com/pages/agregar-medicamento.html</loc>
+    </url>
 </urlset>

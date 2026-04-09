@@ -1,3 +1,4 @@
+// importar funciones para interactuar con la API de medicamentos
 import { obtenerDatos, eliminarDato } from '../js/medicamentosApi.js';
 
 const tbody = document.getElementById('catalogo-body');

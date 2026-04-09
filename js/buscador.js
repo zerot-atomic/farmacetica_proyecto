@@ -1,3 +1,4 @@
+// importar función para obtener datos de la API de medicamentos
 import { obtenerDatos } from './medicamentosApi.js';
 
 function obtenerTexto() {
@@ -43,6 +44,7 @@ function mostrarResultados(filtrados, texto) {
     resultado.innerHTML = html;
 }
 
+// Agrega un listener al botón de búsqueda para ejecutar la función de filtrado
 const btnBuscar = document.querySelector('#btn-buscar');
 btnBuscar.addEventListener('click', () => {
     filtrarMedicamentos().then(({ filtrados, texto }) => {

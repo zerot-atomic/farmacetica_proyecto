@@ -1,3 +1,4 @@
+// importar funciones para interactuar con la API de medicamentos y validar datos
 import { obtenerMedicamentoPorId, actualizarDato } from './medicamentosApi.js';
 import { validarDatos } from './validar-medicamento.js';
 
