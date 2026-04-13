@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador</title>
+    <link rel="stylesheet" href="css/main-style.css">
+</head>
+<body>
+    
+    <!-- Contenedor del la barra de navegación -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- Contenedor del breadcrumb -->
+        <div id="breadcrumb-container"></div>
+        
+        <section id="medicamentos">
+            <p>Bienvenido(a), <span id="user-name-display" style="font-weight: bold;">Cargando...</span></p>
+            <h1>Búsqueda en el Inventario</h1>  
+            <p>Bienvenido al panel de Administrador, busca medicamentos en nuestro catálogo.</p>   
+            <input type="text" id="formulario" placeholder="Ej. Paracetamol, Omeprazol, Aspirina...">
+            <ul id="resultado"></ul>
+        </section>
+        
+        <section id="avisos-inventario">
+            <h2>Resumen General</h2>
+            <ul>
+                <li>Total de medicamentos registrados: 124</li>
+                <li>Medicamentos con bajo stock: 8</li>
+                <li>Proveedores activos: 12</li>
+                <li>Sucursales registradas: 3</li>
+            </ul>
+        </section>
+        
+    </main>
+    
+    <!-- Contenedor del pie de página -->
+    <div id="footer-container"></div>
+    
+    <script type="module" src="js/layout.js"></script>
+    <script src="/js/breadcrumb.js"></script>
+    <script src="js/busqueda.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

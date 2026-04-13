@@ -16,6 +16,7 @@
         <div id="breadcrumb-container"></div>
         
         <section id="medicamentos">
+            <p>Bienvenido(a), <span id="user-name-display" style="font-weight: bold;">Cargando...</span></p>
             <h1>Búsqueda en el Inventario</h1>  
             <p>Busca medicamentos en nuestro catálogo.</p>   
             <input type="text" id="formulario" placeholder="Ej. Paracetamol, Omeprazol, Aspirina...">
@@ -36,11 +37,11 @@
     
     <!-- Contenedor del pie de página -->
     <div id="footer-container"></div>
-    
-    <script src="js/layout.js"></script>
-    <script>loadLayout();</script>
+
+    <!-- Scripts -->
+    <script type="module" src="js/layout.js"></script>
     <script src="/js/breadcrumb.js"></script>
     <script src="js/busqueda.js"></script>
-    <script src="js/auth.js"></script>
+    <script type="module" src="js/auth.js"></script>
 </body>
 </html>
